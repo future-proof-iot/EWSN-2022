@@ -107,7 +107,10 @@ the output is a json list of nodes information. If this fails, check your creden
 
 ## II) Experimentation details
 
-List individual experiments with their individual README.
+- [Baseline]():
+- [Accuracy]():
+- [Power Consumption]():
+- [Field Test](experiments/field-test/README.md):
 
 ## III) Contact Tracing Demonstrator
 
