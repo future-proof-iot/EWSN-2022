@@ -1,0 +1,339 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgoldenrod19413532}{RGB}{194,135,32}
+\definecolor{darkslategray38}{RGB}{38,38,38}
+\definecolor{darkslategray54}{RGB}{54,54,54}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{teal23108155}{RGB}{23,108,155}
+
+\begin{axis}[
+axis line style={darkslategray38},
+legend cell align={left},
+legend columns=2,
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0,-0.4)},
+  anchor=south west,
+  draw=none
+},
+tick align=outside,
+tick pos=left,
+x grid style={lightgray204},
+xlabel=\textcolor{darkslategray38}{orientation},
+xmin=-0.5, xmax=3.5,
+xtick style={color=darkslategray38},
+xtick={0,1,2,3},
+xticklabels={right,left,front,back},
+y grid style={lightgray204},
+ylabel=\textcolor{darkslategray38}{d\_err},
+ymajorgrids,
+ymin=-0.011, ymax=0.231,
+ytick style={color=darkslategray38},
+ytick={-0.05,0,0.05,0.1,0.15,0.2,0.25},
+yticklabels={
+  \(\displaystyle {\ensuremath{-}0.05}\),
+  \(\displaystyle {0.00}\),
+  \(\displaystyle {0.05}\),
+  \(\displaystyle {0.10}\),
+  \(\displaystyle {0.15}\),
+  \(\displaystyle {0.20}\),
+  \(\displaystyle {0.25}\)
+}
+]
+\path [draw=darkslategray54, fill=teal23108155, semithick]
+(axis cs:-0.396,0.0699999999999998)
+--(axis cs:-0.004,0.0699999999999998)
+--(axis cs:-0.004,0.1)
+--(axis cs:-0.396,0.1)
+--(axis cs:-0.396,0.0699999999999998)
+--cycle;
+\path [draw=darkslategray54, fill=darkgoldenrod19413532, semithick]
+(axis cs:0.004,0.01026495)
+--(axis cs:0.396,0.01026495)
+--(axis cs:0.396,0.0298613)
+--(axis cs:0.004,0.0298613)
+--(axis cs:0.004,0.01026495)
+--cycle;
+\path [draw=darkslategray54, fill=teal23108155, semithick]
+(axis cs:0.604,0.04)
+--(axis cs:0.996,0.04)
+--(axis cs:0.996,0.0699999999999998)
+--(axis cs:0.604,0.0699999999999998)
+--(axis cs:0.604,0.04)
+--cycle;
+\path [draw=darkslategray54, fill=darkgoldenrod19413532, semithick]
+(axis cs:1.004,0.0281750999999998)
+--(axis cs:1.396,0.0281750999999998)
+--(axis cs:1.396,0.0610029)
+--(axis cs:1.004,0.0610029)
+--(axis cs:1.004,0.0281750999999998)
+--cycle;
+\path [draw=darkslategray54, fill=teal23108155, semithick]
+(axis cs:1.604,0.12)
+--(axis cs:1.996,0.12)
+--(axis cs:1.996,0.16)
+--(axis cs:1.604,0.16)
+--(axis cs:1.604,0.12)
+--cycle;
+\path [draw=darkslategray54, fill=darkgoldenrod19413532, semithick]
+(axis cs:2.004,0.0391464999999998)
+--(axis cs:2.396,0.0391464999999998)
+--(axis cs:2.396,0.0607262749999998)
+--(axis cs:2.004,0.0607262749999998)
+--(axis cs:2.004,0.0391464999999998)
+--cycle;
+\path [draw=darkslategray54, fill=teal23108155, semithick]
+(axis cs:2.604,0.12)
+--(axis cs:2.996,0.12)
+--(axis cs:2.996,0.15)
+--(axis cs:2.604,0.15)
+--(axis cs:2.604,0.12)
+--cycle;
+\path [draw=darkslategray54, fill=darkgoldenrod19413532, semithick]
+(axis cs:3.004,0.073154675)
+--(axis cs:3.396,0.073154675)
+--(axis cs:3.396,0.0945601749999999)
+--(axis cs:3.004,0.0945601749999999)
+--(axis cs:3.004,0.073154675)
+--cycle;
+\draw[draw=darkslategray54,fill=teal23108155,line width=0.3pt] (axis cs:0,0) rectangle (axis cs:0,0);
+\addlegendimage{ybar,ybar legend,draw=darkslategray54,fill=teal23108155,line width=0.3pt}
+\addlegendentry{decawave}
+
+\draw[draw=darkslategray54,fill=darkgoldenrod19413532,line width=0.3pt] (axis cs:0,0) rectangle (axis cs:0,0);
+\addlegendimage{ybar,ybar legend,draw=darkslategray54,fill=darkgoldenrod19413532,line width=0.3pt}
+\addlegendentry{riot}
+
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+-0.2 0.0699999999999998
+-0.2 0.04
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+-0.2 0.1
+-0.2 0.13
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+-0.298 0.04
+-0.102 0.04
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+-0.298 0.13
+-0.102 0.13
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.2 0.01026495
+0.2 0.0003484999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.2 0.0298613
+0.2 0.0556315999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.102 0.0003484999999998
+0.298 0.0003484999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.102 0.0556315999999998
+0.298 0.0556315999999998
+};
+\addplot [black, mark=diamond*, mark size=2.5, mark options={solid,fill=darkslategray54}, only marks, forget plot]
+table {%
+0.2 0.0606040000000001
+0.2 0.0716964999999998
+0.2 0.0627838999999998
+0.2 0.0610628000000001
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.8 0.04
+0.8 0
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.8 0.0699999999999998
+0.8 0.11
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.702 0
+0.898 0
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.702 0.11
+0.898 0.11
+};
+\addplot [black, mark=diamond*, mark size=2.5, mark options={solid,fill=darkslategray54}, only marks, forget plot]
+table {%
+0.8 0.12
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.2 0.0281750999999998
+1.2 8.49999999985585e-06
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.2 0.0610029
+1.2 0.1073174
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.102 8.49999999985585e-06
+1.298 8.49999999985585e-06
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.102 0.1073174
+1.298 0.1073174
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.8 0.12
+1.8 0.08
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.8 0.16
+1.8 0.21
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.702 0.08
+1.898 0.08
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.702 0.21
+1.898 0.21
+};
+\addplot [black, mark=diamond*, mark size=2.5, mark options={solid,fill=darkslategray54}, only marks, forget plot]
+table {%
+1.8 0.22
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.2 0.0391464999999998
+2.2 0.0112168000000001
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.2 0.0607262749999998
+2.2 0.0927490999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.102 0.0112168000000001
+2.298 0.0112168000000001
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.102 0.0927490999999998
+2.298 0.0927490999999998
+};
+\addplot [black, mark=diamond*, mark size=2.5, mark options={solid,fill=darkslategray54}, only marks, forget plot]
+table {%
+2.2 0.0040274
+2.2 0.0963055999999999
+2.2 0.0978975000000001
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.8 0.12
+2.8 0.0899999999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.8 0.15
+2.8 0.19
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.702 0.0899999999999998
+2.898 0.0899999999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.702 0.19
+2.898 0.19
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+3.2 0.073154675
+3.2 0.0476049999999999
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+3.2 0.0945601749999999
+3.2 0.1191699
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+3.102 0.0476049999999999
+3.298 0.0476049999999999
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+3.102 0.1191699
+3.298 0.1191699
+};
+\addplot [black, mark=diamond*, mark size=2.5, mark options={solid,fill=darkslategray54}, only marks, forget plot]
+table {%
+3.2 0.0299496000000001
+3.2 0.0239528999999998
+3.2 0.1345956
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+-0.396 0.0899999999999998
+-0.004 0.0899999999999998
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.004 0.0195677
+0.396 0.0195677
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+0.604 0.06
+0.996 0.06
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.004 0.0443506
+1.396 0.0443506
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+1.604 0.14
+1.996 0.14
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.004 0.0497607500000001
+2.396 0.0497607500000001
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+2.604 0.14
+2.996 0.14
+};
+\addplot [semithick, darkslategray54, forget plot]
+table {%
+3.004 0.08347545
+3.396 0.08347545
+};
+\end{axis}
+
+\end{tikzpicture}
