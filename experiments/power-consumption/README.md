@@ -1,6 +1,6 @@
 # Power Consumption
 
-This experiments evaluates the PoC average current consumption. Its measured in
+This experiment evaluates the PoC average current consumption. It's measured in
 scenarios with different amount of neighbors and with varying TWR back-off.
 
 - neighbors: dwm1001 devices that close enough for the DUT to schedule TWR exchanges with
@@ -23,10 +23,26 @@ in J4 the J-Link current supply is not measured.
 
 The DUT was deployed in IoT-LAB Lille, which has 14 dwm1001-dev boards available,
 2 mores where locally added to reach 16 neighbors.
+The picture below illustrates a local power profiling testbed wiring.
+![](./figures/pp_testbed.png)
+Note that the PPKII has a logic port exposing 8 GPIOs (`D0 -> D7`) that are connected to the DWM1001-dev J10 header (RPI-compatible) of each board.
+Indeed, for debugging purposes, we used such GPIOs to track internal firmware states (transmitting, receiving, broadcasting, etc) with the following pinout:
+
+| Signal | Board    | J10 Header     | DWM1001        | NRF52832 pin |
+|--------|-----------|----------------|----------------|--------------|
+| D0     | DUT       | SDA RPI (3)    | GPIO_15 (23)   | P0.15        |
+| D1     | DUT       | SCL RPI (5)    | GPIO_8 (25)    | P0.8         |
+| D2     | DUT       | GPIO RPI (15)  | READY (19)     | P0.26        |
+| D3     | DUT       | SPI1_MOSI (19) | SPIS_MOSI (27) | P0.6         |
+| D4     | Responder | SDA RPI (3)    | GPIO_15 (23)   | P0.15        |
+| D5     | Responder | SCL RPI (5)    | GPIO_8 (25)    | P0.8         |
+| D6     | Responder | GPIO RPI (15)  | READY (19)     | P0.26        |
+| D7     | Responder | SPI1_MOSI (19) | SPIS_MOSI (27) | P0.6         |
+
 
 ## II) Experimentation details
 
-By default the application will use default DESIRE+PEPPER parameters:
+By default, the application will use default DESIRE+PEPPER parameters:
 
 - Advertisement per EBID slice: 20
 - Epoch duration: 900s
@@ -54,7 +70,7 @@ or in c...
 ## II.A) Embedded Application
 
 This test uses the [pepper_pm](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_pm)
-application. Refer to the application `README` for details on required hardware.
+application. Refer to the application's `README` for more details.
 
 ### II.B) General Workflow
 
@@ -107,13 +123,13 @@ This section provides an overview of the [datasets](./datasets)
 | Dataset | Description |
 |---------|-------------|
 | [pepper_pm_ppk.zip](./datasets/pepper_pm_ppk.zip) | Nordic PPK2 captures exported as `.ppk` in the form `data_los_<neighbors>_<expiry-time>`|
-| [pepper_pm.csv](./datasets/pepper_pm_csv) | CSV with average current draw, extracted from [pepper_pm_ppk.zip](./datasets/pepper_pm_ppk.zip)|
+| [pepper_pm.csv](./datasets/pepper_pm.csv) | CSV with average current draw, extracted from [pepper_pm_ppk.zip](./datasets/pepper_pm_ppk.zip)|
 | [uwb_pm.csv](./datasets/uwb_pm.csv) | CSV with UWB power consumption profile, based on numeric estimations|
 | [ble_pm.csv](./datasets/ble_pm.csv) | CSV with BLE power consumption profile, based on numeric estimations|
 
 ## IV.A) Average Current Draw
 
-The [pepper_pm.csv](./datasets/pepper_pm_csv) dataset ca be plotted as:
+The [pepper_pm.csv](./datasets/pepper_pm.csv) dataset ca be plotted as:
 
 ```python
 python plot.py
