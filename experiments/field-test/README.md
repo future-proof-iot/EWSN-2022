@@ -11,15 +11,6 @@ setting the following:
 
 ## I) Prerequisites
 
-- Add these pythonlibs to your python path:
-    - [pepper/pythonlibs](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/dist/pythonlibs)
-    - `rng-eval/dist/pythonlibs`
-    - [RIOT/dist/pythonlibs](https://github.com/RIOT-OS/RIOT/tree/master/dist/pythonlibs)
-- `pip install -r requirements.txt`
-
-_Note_: if using `virtualenvwrapper`: `add2virtualenv dist/pythonlibs/`, or add to
-`PYTHONPATH`: `export PYTHONPATH="$PYTHONPATH:<the path>/dist/pythonlibs/"`.
-
 - For this experimentation a mobile DWM1001-DEV devices is required, with persistent
 storage through an SD-CARD, see [requirements](https://gitlab.inria.fr/pepper/riot-desire/-/blob/develop/apps/pepper_field/README.md#pre-requisites) listed by the application.
 
@@ -86,39 +77,3 @@ On the device `SDCARD` 1 to 3 files should be available:
 - 'EPOCH.TXT': contact data logs in JSON format
 - 'BLE.TXT' (optional): BLE metrics for each received advertisement, in JSON format
 - 'UWB.TXT' (optional): UWB metrics for each successful TWR exchange, in JSON format
-
-Copy them over. To parse the data the following snippets can be used to parse the
-logs and output them to a file.
-
-```python
-import sys
-from pepper_data.epoch import EpochData
-
-data_list = EpochData.from_file(sys.argv[1])
-with open(sys.argv[2], "w") as f:
-    for data in data_list:
-        f.write("{}\n".format(data.to_json_str()))
-```
-
-If optional logs are also enabled then the following snippets can be used to parse
-the BLE and UWB instantaneous information.
-
-```python
-import sys
-from pepper_data.datum import UWBDatum
-
-data_list = UWBDatum.from_file(sys.argv[1])
-with open(sys.argv[2], "w") as f:
-    for data in data_list:
-        f.write("{}\n".format(data.to_json_str()))
-```
-
-```python
-import sys
-from pepper_data.datum import BLEDatum
-
-data_list = BLEDatum.from_file(sys.argv[1])
-with open(sys.argv[2], "w") as f:
-    for data in data_list:
-        f.write("{}\n".format(data.to_json_str()))
-```
