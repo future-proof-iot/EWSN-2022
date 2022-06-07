@@ -1,5 +1,5 @@
 # Accuracy
-[TODO] Add biref summary
+[TODO] [TODO] Add brief summary
 
 
 
@@ -7,12 +7,14 @@
 Testbed setup + pics
 
 ## II) Prerequisites
-
+[TODO] 
 ## II.A) Embedded Application
-
+[TODO] 
 ### II.B) General Workflow 
-
+[TODO] 
 ## III) Exposed datasets
+[TODO] Add pandas preview
+
 | Dataset | Description |
 |---------|-------------|
 | [ds-one-to-one-ble.csv](./datasets/ds-one-to-one-ble.csv) | BLE RSSI proximity data |
@@ -28,3 +30,4 @@ Testbed setup + pics
 |(c) No Contact Scenarios: **UWB** proximity data | (d) No Contact Scenarios: **BLE** proximity data  |     
 
 ## V) Comments
+[TODO] Add comments as in paper
