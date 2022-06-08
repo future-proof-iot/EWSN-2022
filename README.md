@@ -1,5 +1,43 @@
 # EWSN-2022
 
+This repository is a companion for the paper "PEPPER: Precise Contact Tracing and
+Privacy Preservation using Cheap Tokens with BLE and UWB"
+
+> Precise and privacy-preserving contact tracing has become a necessity around the globe,
+> for epidemiological reasons, due to the resurgence of global pandemics. To that effect,
+> a variety of smartphone-based solutions for contact tracing have been developed in a rush
+> and massively deployed, with mixed results, and amid controversies. In reality, achieving
+> trustworthy and effective contact tracing at large scale is still an open problem.
+> In this paper, we contribute to this field by providing a fully open source software platform leveraging jointly Bluetooth and Ultra-Wide Band (UWB) radios, on top of which various contact tracing solutions can be quickly developed and tested.
+> To illustrate the capability of this platform,
+> we design and implement \pepper, a technique which leverages jointly Bluetooth and UWB radios (to provide more reliable distance estimations), combined with an adaptation of \desire (an existing contact tracing protocol).
+> We show that DESIRE+PEPPER can operate on cheap physical tokens based on low-power microcontrollers.
+> We evaluate the complementarity of Bluetooth and UWB in this context, via experiments mimicking various scenarios relevant for contact tracing.
+> We show that compared to using only BLE, UWB-based contact event classification can decrease false negatives, but tends to increase false positives.
+> Our results suggest that, while DESIRE+PEPPER improves precision over state-of-the-art, further research is required to harness UWB-BLE synergy for contact tracing in practice.
+> To this end, our open source platform (which can run on an open-access testbed) provides a useful playground for the research community in this domain.
+
+Experiments where realized with [DWM1001-DEV](https://www.decawave.com/product/mdek1001-deployment-kit/) based boards.
+Some of them need a specific, but easy to reproduce setup, while others where performed on the [FIT IoT-LAB](https://www.iot-lab.info/) testbed
+and can therefore be reproduced with no hardware requirements.
+
+The remained is organized as follows:
+
+- Section I: specifies common pre requirements shared for all experiments.
+- Section II: provides an overview of the different experiments, in cases where those results where used in the paper,
+  the matching sections is described.
+- Section III: a brief mention to a full contact tracing demonstrator based on a CoAP server to which nodes can offload
+  their contact tracing information.
+
+Additionally the individual experiments will often mention
+
+- Additional specific setup and requirements
+- Details on the experiment configuration, such as the embedded application (Public Open-source), and the experiment workflow
+- Exposed datasets if any as well as tools to analyze/plot those datasets
+
+:warning: Based on this guide, the reader can either:
+  - plot the paper results from the datasetsI;
+  - **or** generate new datasets using the same software stack;
 
 ---
 
@@ -107,11 +145,11 @@ the output is a json list of nodes information. If this fails, check your creden
 
 ## II) Experimentation details
 
-- [Baseline](experiments/baseline):
-- [Accuracy](experiments/accuracy):
-- [Scalability](experiments/scalability):
-- [Power Consumption](experiments/power-consumption):
-- [Field Test](experiments/field-test):
+- [Baseline](experiments/baseline): UWB baseline evaluations, RIOT UWB support vs Decawave PANS R2 firmware
+- [7.1 Accuracy](experiments/accuracy): PEPPER+DESIRE UWB & BLE metrics accuracy analysis
+- [7.3 Scalability](experiments/scalability): PEPPER+DESIRE scalability with an increasing number of neighbors
+- [7.2 Power Consumption](experiments/power-consumption): PEPPER+DESIRE power consumption evaluation as well as numerical projections
+- [Field Test](experiments/field-test): PEPPER field tests in non controlled environments
 
 ## III) Contact Tracing Demonstrator
 
