@@ -154,4 +154,4 @@ the output is a json list of nodes information. If this fails, check your creden
 ## III) Contact Tracing Demonstrator
 
 For the interested reader a Contact Tracing Demo where nodes offload there
-contact data over CoAP to an IPv6 over BLE proxy is described [here](https://github.com/future-proof-iot/EWSN-pepper/tree/master/apps/pepper_demo).
+contact data over CoAP to an IPv6 over BLE proxy is described [here](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_demo/README.md).

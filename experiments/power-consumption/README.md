@@ -69,7 +69,7 @@ or in c...
 
 ## II.A) Embedded Application
 
-This test uses the [pepper_pm](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_pm)
+This test uses the [pepper_pm](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_pm)
 application. Refer to the application's `README` for more details.
 
 ### II.B) General Workflow

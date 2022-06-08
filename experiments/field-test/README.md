@@ -12,7 +12,7 @@ setting the following:
 ## I) Prerequisites
 
 - For this experimentation a mobile DWM1001-DEV devices is required, with persistent
-storage through an SD-CARD, see [requirements](https://gitlab.inria.fr/pepper/riot-desire/-/blob/develop/apps/pepper_field/README.md#pre-requisites) listed by the application.
+storage through an SD-CARD, see [requirements](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_field/README.md#pre-requisites) listed by the application.
 
 - Devices will be configured on the field through the [nRF Connect For Mobile](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-mobile/GetStarted) application.
 
@@ -30,7 +30,7 @@ adding 'subway' to tag when the user was riding in the subway.
 
 ## II.A) Embedded Application
 
-This test uses the [pepper_pm](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_field)
+This test uses the [pepper_pm](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_field)
 application. Refer to the application `README` for details on required hardware.
 
 Optionally the following flags can be added to also log individual BLE and UWB
@@ -68,7 +68,7 @@ or in c...
 
 Upon flashing the devices are not yet performing contact tracing, they must be
 configured to do so through their GATT interface. For any scenarios of interest
-the workflow is described in the application [README](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_field).
+the workflow is described in the application [README](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_field).
 
 ### III) Experiment Data Parsing
 

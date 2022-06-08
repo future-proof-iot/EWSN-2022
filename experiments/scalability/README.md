@@ -41,8 +41,8 @@ or in c...
 
 ## II.A) Embedded Application
 
-This test uses the [pepper_iotlab](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_iotlab)
-application, see the [README.md](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_iotlab/README.md) for more details. This application enables a module to log TWR missed encounters, which will be used to calculate a TWR exchange success rate.
+This test uses the [pepper_iotlab](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_iotlab)
+application, see the [README.md](https://anonymous.4open.science/r/EWSN-pepper-D6AD/apps/pepper_iotlab/README.md) for more details. This application enables a module to log TWR missed encounters, which will be used to calculate a TWR exchange success rate.
 
 ### II.B) General Workflow
 
