@@ -215,11 +215,27 @@ For PEPPER:
 ```
 ## IV) Results
 The experiment results are plotted below: the proximity data with respect to the LOS reference (blue curves): in case of a contact ((a), (b)), and no contact ((c), (d)).
-|![baseline_distance](./figures/Figure_5.png)|![baseline_distance](./figures/Figure_7.png)|
-|:------------------------------------------:|:------:|
-|  (a) Contact Scenarios: **UWB** proximity data  | (b) Contact Scenarios: **BLE** proximity data |     
-|![baseline_distance](./figures/Figure_1.png)|![baseline_distance](./figures/Figure_3.png)|
-|(c) No Contact Scenarios: **UWB** proximity data | (d) No Contact Scenarios: **BLE** proximity data  |     
+<table>
+<tbody>
+	<tr>
+        <td><input type="image" src="./figures/Figure_5.png" width="300"></td>
+        <td><input type="image" src="./figures/Figure_7.png" width="300"></td>
+	</tr>
+    <tr>
+		<td>(a) Contact Scenarios: <b>UWB</b> proximity data </td>
+		<td>(b) Contact Scenarios: <b>BLE</b> proximity data </td>
+	</tr>
+	<!---->
+	<tr>
+        <td><input type="image" src="./figures/Figure_1.png" width="300"></td>
+        <td><input type="image" src="./figures/Figure_3.png" width="300"></td>
+	</tr>
+    <tr>
+		<td>(c) No Contact Scenarios: <b>UWB</b> proximity data </td>
+		<td>(d) No Contact Scenarios: <b>BLE</b> proximity data </td>
+	</tr>
+</tbody>
+</table>
 
 Being RSSI-based, BLE is more sensitive to environmental conditions (farther from LOS) than UWB Time-of-Flight approach.
 Overall we can see that UWB-based metrics would allow to reduce False Negatives, but at the cost of more False Positives in cases where BLE metrics could be sufficiently attenuated to avoid such detection errors. 
