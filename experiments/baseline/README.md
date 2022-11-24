@@ -130,7 +130,6 @@ This section provides an overview of the [datasets](./datasets)
 Dataset content preview:
 ```python
 >>> import pandas as pd
->>> data = pd.read_
 >>> data = pd.read_csv('ds-baseline.csv', index_col=0)
 >>> data.head(2)
    env method orientation    d    src    nei     d_est  d_err_absolute  d_err_relative
