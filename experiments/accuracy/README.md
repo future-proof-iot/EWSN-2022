@@ -4,12 +4,34 @@ By taking Line-Of-Sight (LOS) results as a reference, we investigate the effect 
 In a nutshell, the main takeaway is that deciding the contact based on BLE RSSI or UWB ranging alone, is not sufficient for CT. Both types of metrics should be jointly used for an optimal classification.
 
 ## I) Experimentation details
-We deploy one static node and one mobile node (carried as a wear-able shown in Figure and Table below). The experiments consist in 3 minute captures, over distances of $\left[0.5m, 1m, 1.5m, 2m, 2.5m, 3.5m\right]$, as we are mostly interested in accuracy when two tokens are near the critical distance for contact tracing, $d_c = 2m$. In order
-|![pocket](./pics/setup_ct_pocket_back.jpg)|![LOS](./pics/setup_ct_los.png)|![LOS](./pics/setup_ct_backpack.jpg)|
-|:------------------------------------------:|:------:|:------:|
-|  (a) Pocket | (b) Line Of Sight | (c) Backpack |     
-|![pocket](./pics/setup_ct_body.jpg)|![LOS](./pics/setup_ct_whiteboard.jpg)|![LOS](./pics/setup_ct_plexiglass.jpg)|
-|  (d) Human Body | (b) Whiteboard| (c) Plexiglass |     
+We deploy one static node and one mobile node (carried as a wear-able shown in Figure and Table below). The experiments consist in 3 minute captures, over distances of $\left[0.5m, 1m, 1.5m, 2m, 2.5m, 3.5m\right]$, as we are mostly interested in accuracy when two tokens are near the critical distance for contact tracing, $d_c = 2m$. 
+<table>
+<caption>CT-relevant scenarios for proximity measurements [pics]</caption>
+<tbody>
+	<tr>
+		<td><input type="image" src="./pics/setup_ct_pocket_back.jpg" width="230"></td>
+        <td><input type="image" src="./pics/setup_ct_los.png" width="230"></td>
+        <td><input type="image" src="./pics/setup_ct_backpack.jpg" width="230"></td>
+	</tr>
+    <tr>
+		<td>(a) Pocket</td>
+        <td>(b) Line Of Sight</td>
+        <td>(c) Backpack </td>
+	</tr>
+    <!---------------------------->
+    <tr>
+		<td><input type="image" src="./pics/setup_ct_body.jpg" width="230"></td>
+        <td><input type="image" src="./pics/setup_ct_whiteboard.jpg" width="230"></td>
+        <td><input type="image" src="./pics/setup_ct_plexiglass.jpg" width="230"></td>
+	</tr>
+    <tr>
+		<td>(d) Human Body </td>
+        <td>(e) Whiteboard </td>
+        <td>(f) Plexiglass </td>
+	</tr>
+</tbody>
+</table>
+
 <table>
 <caption>CT-relevant scenarios for proximity measurements</caption>
 <thead>
