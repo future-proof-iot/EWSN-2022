@@ -117,3 +117,57 @@ python plot.py
 ```
 
 <img src="./figures/pepper_scale.jpg" width="300">
+
+---
+# Notes on Memory Scalability
+The generated data during an epoch requires RAM for tracking the encounters during the epoch, and FLASH storage for off-line infection risk analysis. Since the amount of
+data increases with the number of neighbors and encounters,
+data aggregation is necessary to tract the size and cost of the
+embedded device. We therefore consider the memory footprint analysis under the following:
+1. 14 days of contact information, stored in non-volatile storage (see Table 1);
+2. encounter information, re-used for every epoch (see Table 2),
+conditioned by two parameters: the average number $N_{contacts}$
+of daily contacts, and the average number $N_{encounters}$ per
+epoch.
+
+| **Item** | **day** | **PETs** | **dist.** | **RSSI** | **time** | **num** | **Total** |
+|----------|---------|----------|-----------|----------|----------|---------|-----------|
+| UWB      | 2B      | 2x32B    | 2B        | 0B       | 2B       | 2B      | **70B**   |
+| BLE      | 2B      | 2x32B    | 0B        | 15x2B    | 15x2B    | 15x2B   | **156B**  |
+
+**Table 1** - Footprint ROM: Contact Data.<br>
+<font size="2">*RSSI values are averaged over 15 windows per epoch in DESIRE</font>
+
+| **Item** | **EBID** | **dist.** | **count** | **RSSI** | **time[s]** | **Total** |
+|----------|----------|-----------|-----------|----------|-------------|-----------|
+| UWB      | 32B      | 4B        | 2B        | 0B       | 3x2B        | **44B**   |
+| BLE      | 32B      | 0         | 15x2B     | 15x4B    | 15x2xB      | **182B**  |
+
+**Table 2** - Footprint RAM: Encounter Data.<br>
+<font size="2">*RSSI values are averaged over 15 windows per epoch in DESIRE</font>
+
+**Memory footprint**<br>
+Let us consider the **D2** or **D3** deployment, where the device depends on a proxy for matching PETS and performing risk evaluation, but must still keep
+track of contacts locally. If we consider 100 contacts per day,
+this translates into 98 kB and 218.4kB for distance and RSSI
+based metrics respectively. This amount of data is rather low
+and could even be stored in internal flash to lower device
+cost (note that for exposure requests one of the PET is not
+transmitted).
+
+**On-device encounter filtering**<br> 
+To evaluate the effect of contact data filtering on memory footprint, we ran an experiment on all DWM1001-DEV nodes
+on the FIT-IoT-LAB. In the selected experiment, all nodes are in LOS, but only 10 pairs of them are
+closer than 2.25m (20 true contacts). We filtered contacts independently using RSSI and UWB metrics,
+and in both cases a minimum encounter time of 10~minutes was required.
+Applying a distance threshold of $2.25m$, we reduced logged contacts to 20 (0 False Negatives).
+Likewise, using an RSSI threshold of -67dB, we were able to reduce the logged
+contacts to 138 (stricter filters would mean discarding True Positives).
+
+**In-epoch encounter data**<br>
+At the end of an epoch, encounters can be filtered to reduce ROM memory footprint. 
+But during the epoch, the device must keep track of all neighbors, and once a neighbor is deemed an encounter it must also keep
+track of contact tracing metrics.
+If we consider 200 encounters per epoch (e.g., busy subway ride), then RSSI based metrics would require 30kB of RAM, almost
+half the available RAM on nRF52832, while distance based metrics would require only
+8.8kB.
