@@ -116,4 +116,4 @@ The [ds-scale.csv](./datasets/ds-scale.csv) dataset ca be plotted with.
 python plot.py
 ```
 
-![](./figures/pepper_scale.jpg)
+<img src="./figures/pepper_scale.jpg" width="300">

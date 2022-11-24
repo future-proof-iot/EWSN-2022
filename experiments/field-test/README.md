@@ -16,10 +16,14 @@ storage through an SD-CARD, see [requirements](https://anonymous.4open.science/r
 
 - Devices will be configured on the field through the [nRF Connect For Mobile](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-mobile/GetStarted) application.
 
-
-|![field_prototype](../../pics/prototype-wearable-token.png)|
-|:-------------------------------------------------------------------------------:|
-|                          *Field Prototype*                           |
+<table>
+<caption>Field Prototype</caption>
+<tbody>
+	<tr>
+		<td><input type="image" src="../../pics/prototype-wearable-token.png" width="300"></td>
+	</tr>
+</tbody>
+</table>
 
 ## II) Experimentation details
 

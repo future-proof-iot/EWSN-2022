@@ -60,7 +60,7 @@ We deploy one static node and one mobile node (carried as a wear-able shown in F
 </thead>
 <tbody>
 	<tr>
-		<td><i>Door<i></td>
+		<td><i>Door</i></td>
 		<td colspan="2">A 4cm thick wooden door, made of 32mm chipped wood core with a 4mm mdf panel on both sides.</td>
 	</tr>
 	<tr>

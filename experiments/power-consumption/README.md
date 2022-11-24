@@ -24,7 +24,9 @@ in J4 the J-Link current supply is not measured.
 The DUT was deployed in IoT-LAB Lille, which has 14 dwm1001-dev boards available,
 2 mores where locally added to reach 16 neighbors.
 The picture below illustrates a local power profiling testbed wiring.
+
 ![](./figures/pp_testbed.png)
+
 Note that the PPKII has a logic port exposing 8 GPIOs (`D0 -> D7`) that are connected to the DWM1001-dev J10 header (RPI-compatible) of each board.
 Indeed, for debugging purposes, we used such GPIOs to track internal firmware states (transmitting, receiving, broadcasting, etc) with the following pinout:
 
@@ -107,14 +109,18 @@ Power Consumption BLE details:
 ![ble_pm](./figures/ble_pm.png)
 
 Considering default DESIRE+PEPPER parameters, therefore a 2ms receive window we observe the critical components to optimize.
-
-|![ble_pm_bars](./figures/ble_pm_details.jpg)|
-|:--------------------------------------------------------------------:|
-|     *BLE Scanner vs Advertiset Avg. Current*                        |
-
-|![uwb_pm_bars](./figures/uwb_pm_details.jpg)|
-|:--------------------------------------------------------------------:|
-|     *UWB Responder vs Initiator Avg. Current*                        |
+<table>
+<tbody>
+	<tr>
+        <td><input type="image" src="./figures/ble_pm_details.jpg" width="400"></td>
+        <td><input type="image" src="./figures/uwb_pm_details.jpg" width="400"></td>
+	</tr>
+    <tr>
+		<td><i>BLE Scanner vs Advertiser Avg. Current</i></td>
+		<td><i>UWB Responder vs Initiator Avg. Current*</i></td>
+	</tr>
+</tbody>
+</table>
 
 ## IV) Exposed datasets
 
@@ -135,7 +141,8 @@ The [pepper_pm.csv](./datasets/pepper_pm.csv) dataset ca be plotted as:
 python plot.py
 ```
 
-![](./figures/pepper_pm.jpg)
+<img src="./figures/pepper_pm.jpg" width="400">
+
 
 ## V) Comments
 

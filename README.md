@@ -145,11 +145,11 @@ the output is a json list of nodes information. If this fails, check your creden
 
 ## II) Experimentation details
 
-- [Baseline](experiments/baseline): UWB baseline evaluations, RIOT UWB support vs Decawave PANS R2 firmware
-- [7.1 Accuracy](experiments/accuracy): PEPPER+DESIRE UWB & BLE metrics accuracy analysis
-- [7.3 Scalability](experiments/scalability): PEPPER+DESIRE scalability with an increasing number of neighbors
-- [7.2 Power Consumption](experiments/power-consumption): PEPPER+DESIRE power consumption evaluation as well as numerical projections
-- [Field Test](experiments/field-test): PEPPER field tests in non controlled environments
+- [Baseline](experiments/baseline/README.md): UWB baseline evaluations, RIOT UWB support vs Decawave PANS R2 firmware
+- [7.1 Accuracy](experiments/accuracy/README.md): PEPPER+DESIRE UWB & BLE metrics accuracy analysis
+- [7.3 Scalability](experiments/scalability/README.md): PEPPER+DESIRE scalability with an increasing number of neighbors
+- [7.2 Power Consumption](experiments/power-consumption/README.md): PEPPER+DESIRE power consumption evaluation as well as numerical projections
+- [Field Test](experiments/field-test/README.md): PEPPER field tests in non controlled environments
 
 ## III) Contact Tracing Demonstrator
 
