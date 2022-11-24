@@ -77,19 +77,18 @@ We deploy one static node and one mobile node (carried as a wear-able shown in F
 ## II) Prerequisites
 The minimal requirements to collect the experimental data
 - Hardware: Two raspberry pi boards + their dwm1001-dev attached by usb, mounted on tripods
-- Minimal environment for running [pepper_experience](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_experience) : 
+- Minimal environment for running [pepper_experience](https://github.com/future-proof-iot/EWSN-pepper/tree/ewsn/apps/pepper_experience) : 
     - Add these pythonlibs to your python path:
-        - [pepper/pythonlibs](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/dist/pythonlibs)
-        - `rng-eval/dist/pythonlibs`
+        - [pepper/pythonlibs](https://github.com/future-proof-iot/EWSN-pepper/tree/ewsn/dist/pythonlibs)
         - [RIOT/dist/pythonlibs](https://github.com/RIOT-OS/RIOT/tree/master/dist/pythonlibs)
     - `pip install -r requirements.txt`
     _Note_: if using `virtualenvwrapper`: `add2virtualenv dist/pythonlibs/`, or add to
     `PYTHONPATH`: `export PYTHONPATH="$PYTHONPATH:<the path>/dist/pythonlibs/"`.
 
 ## II.A) Embedded Application
-The target application is [pepper_experience](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_experience).
+The target application is [pepper_experience](https://github.com/future-proof-iot/EWSN-pepper/tree/ewsn/apps/pepper_experience).
 
-Compared to the [pepper_simple](https://gitlab.inria.fr/pepper/riot-desire/-/tree/develop/apps/pepper_simple) application some extra modules and configurations have been added.
+Compared to the [pepper_simple](https://github.com/future-proof-iot/EWSN-pepper/tree/ewsn/apps/pepper_simple) application some extra modules and configurations have been added.
 
 - `pepper_current_time`: to listen for current time advertisements
 - `pepper_srv_storage`: to enable logging
